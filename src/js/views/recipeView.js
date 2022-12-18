@@ -1,3 +1,3 @@
-export const state = {
-    recipe: {},
-};
+class RecipeView {
+    #parentElement = document.querySelector('.recipe');
+}
