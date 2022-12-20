@@ -2,6 +2,7 @@ import *as model from './model.js';
 import icons from 'url:../img/icons.svg';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
+import recipeView from './views/recipeView';
 
 console.log(icons);
 
@@ -43,6 +44,8 @@ let showRecipe = async function(){
         // Loading Recipe
 
         await model.loadRecipe(id);
+
+        recipeView.render(model.state.recipe);
 
         let recipe = model.state.recipe;
 
